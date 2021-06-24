@@ -173,3 +173,56 @@ button.hipster:hover {
 button.block {
   width: 100%;
 }
+
+/* FORM */
+
+form {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 3rem 3.5rem;
+}
+
+label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+input {
+  width: 100;
+  padding: 0.5rem 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--grey-50);
+  border-color: transparent;
+  border: 1px solid var(--grey-300);
+}
+
+.form-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+
+.task-form,
+.single-task-form {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+
+.task-form h4 {
+  text-align: center;
+}
+
+.task-form .form-alert {
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
