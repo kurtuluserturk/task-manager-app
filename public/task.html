@@ -19,6 +19,10 @@
     <form class="single-task-form">
       <h4>Edit Task</h4>
       <div class="form-control">
+        <label>Task ID</label>
+        <p class="task-edit-id"></p>
+      </div>
+      <div class="form-control">
         <label for="name">Name</label>
         <input type="text" name="name" class="task-edit-name" />
       </div>
@@ -26,12 +30,11 @@
         <label for="completed">completed</label>
         <input type="checkbox" name="completed" class="task-edit-completed" />
       </div>
-      <button type="submit" class="block btn btn-task-edit"></button>
+      <button type="submit" class="block btn task-edit-btn">edit</button>
       <div class="form-alert"></div>
     </form>
     <a href="index.html" class="btn back-link">back to tasks</a>
   </div>
-
   <!-- axios -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
