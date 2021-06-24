@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-  <link rel="shortcut-icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <!-- normalize css -->
@@ -18,21 +18,18 @@
 </head>
 
 <body>
-
   <form class="task-form">
-    <h3>task manager</h3>
+    <h4>task manager</h4>
     <div class="form-control">
-      <input name="name" type="text" class="task-input" placeholder="e.g. make a cake">
-      <button typer="submit" class="btn btn-submit">submit</button>
+      <input type="text" name="name" class="task-input" placeholder="e.g. wash dishes" />
+      <button type="submit" class="btn submit-btn">submit</button>
     </div>
     <div class="form-alert"></div>
   </form>
-
   <section class="tasks-container">
     <p class="loading-text">Loading...</p>
     <div class="tasks"></div>
   </section>
-
   <!-- axios -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
     integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
