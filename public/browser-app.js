@@ -46,7 +46,6 @@ const showTasks = async () => {
 
 showTasks()
 
-
 // delete task /api/tasks/:id
 
 tasksDOM.addEventListener('click', async (e) => {
@@ -64,4 +63,29 @@ tasksDOM.addEventListener('click', async (e) => {
     }
   }
   loadingDOM.style.visibility = 'hidden'
+})
+
+// form
+
+formDOM.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  const name = taskInputDOM.value
+
+  try {
+    await axios.post('/api/v1/tasks', { name })
+    showTasks()
+    taskInputDOM.value = ''
+    formAlertDOM.style.display = 'block'
+    formAlertDOM.textContent = 'success, task added'
+    formAlertDOM.classList.add('text-success')
+  } catch (err) {
+    formAlertDOM.style.display = 'block'
+    formAlertDOM.textContent = `${err}, please try again`
+  }
+
+  // remove text-success class after 3 seconds
+  setTimeout(() => {
+    formAlertDOM.style.display = 'none'
+    formAlertDOM.classList.remove('text-success')
+  }, 3000)
 })
