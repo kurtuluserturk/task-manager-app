@@ -47,3 +47,21 @@ const showTasks = async () => {
 showTasks()
 
 
+// delete task /api/tasks/:id
+
+tasksDOM.addEventListener('click', async (e) => {
+  const el = e.target
+
+  if (el.parentElement.classList.contains('delete-btn')) {
+    loadingDOM.style.visibility = 'visible'
+    const id = el.parentElement.dataset.id
+
+    try {
+      await axios.delete(`/api/v1/tasks/${id}`)
+      showTasks()
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  loadingDOM.style.visibility = 'hidden'
+})
